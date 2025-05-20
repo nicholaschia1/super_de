@@ -24,7 +24,7 @@ df.drop(columns='To_From', inplace = True)
 #make on alpha numeric
 df['Airline Code'] = df['Airline Code'].apply(lambda x: re.sub(r'[^A-Za-z]','', x))
 #seperate with spaces
-df['Airline Code'] = df['Airline Code'].apply(lambda x: re.sub(r"(\w)([A-Z])", r"\1 \2", x))
+df['Airline Code'] = df['Airline Code'].apply(lambda x: re.sub(r'(\w)([A-Z])', r'\1 \2', x))
 # print(df['Airline Code'])
 
 print(df)
